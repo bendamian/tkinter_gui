@@ -9,10 +9,15 @@ sample_label.pack()
 
 def button_clicked():
     print("I got clicked")
-    sample_label.config(text="I got clicked")
+    new_text = input_one.get()
+    sample_label.config(text=new_text)
 
 
 button = tkinter.Button(text="click me", command=button_clicked)
 button.pack()
+
+input_one = tkinter.Entry()
+input_one.pack()
+
 
 window.mainloop()
